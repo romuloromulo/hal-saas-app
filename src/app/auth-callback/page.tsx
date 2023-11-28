@@ -22,7 +22,7 @@ function page() {
       }
     },
     retry: true,
-    retryDelay: 500,
+    retryDelay: 2000,
   });
 
   return (

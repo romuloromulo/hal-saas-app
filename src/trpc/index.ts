@@ -6,9 +6,10 @@ export const appRouter = router({
   authCallback: publicProcedure.query(async () => {
     const { getUser } = getKindeServerSession();
     const user = await getUser();
-    if (!user?.id || !user?.email)
+    if (!user?.id || !user?.email) {
+      console.log(user);
       throw new TRPCError({ code: "UNAUTHORIZED" });
-
+    }
     const dbUser = await db.user.findFirst({
       where: {
         id: user.id,
