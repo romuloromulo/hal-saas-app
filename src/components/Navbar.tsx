@@ -35,7 +35,7 @@ function Navbar() {
                 className={buttonVariants({
                   size: "sm",
                 })}>
-                Criar Conta <ArrowRight className="ml-1.5 h-5 w-5" />
+                Criar user <ArrowRight className="ml-1.5 h-5 w-5" />
               </RegisterLink>
             </>
           </div>
