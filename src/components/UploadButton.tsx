@@ -1,10 +1,17 @@
 "use client";
-
-import { Dialog, DialogTrigger } from "@radix-ui/react-dialog";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { useState } from "react";
-import { Button } from "./ui/button";
 
-function UploadButton() {
+function UpdateButton() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -15,11 +22,12 @@ function UploadButton() {
           setIsOpen(v);
         }
       }}>
-      <DialogTrigger asChild>
+      <DialogTrigger onClick={() => setIsOpen(true)} asChild>
         <Button>Carregar PDF</Button>
       </DialogTrigger>
+      <DialogContent>Fuck</DialogContent>
     </Dialog>
   );
 }
 
-export default UploadButton;
+export default UpdateButton;
